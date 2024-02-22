@@ -94,6 +94,58 @@ import Foundation // コアライブラリ
 sin(Float.pi / 2.0)
 log(1.0)
 
+"""
+String型
+"""
+let p = "abc" // string型
+
+// 特殊文字
+print("ライン\nフィード")
+print("キャリッジ\rリターン")
+print("\"ダブルクオート\"")
+print("\'シングルクオート\'")
+print("バックスラッシュ\\")
+print("\0") // null文字
+
+// 文字列リテラル内での値の展開
+let q = 12 + 15
+let output_1 = "結果：\(p)"
+let output_2 = "結果：\(q)"
+
+// 複数行の文字リテラル
+let r = """
+    こんにちは。
+        こんばんは。
+    こんにちは。
+    """ // 終了の位置よりも浅い行には書けない
+
+// 数値型との相互変換
+let s = String(q)
+print(Int(s)) // nilになる可能性があるため、Optional<Int>型を返す
+print(Int("abc")) // nilになる可能性があるため、Optional<Int>型を返す
+
+//比較
+"abc" == "def"
+"abc" == "abc"
+
+// 結合
+"abc" + "def"
+var u1 = "test1"
+let u2 = "test2"
+u1.append(u2)
+
+// Foundationによる高度な操作
+import Foundation
+// 2つの文字列間の順序の比較
+let options = String.CompareOptions.caseInsensitive // caseInsentive -> 大小区別をしない
+let order = "abc".compare("ABC", options: options)
+order == ComparisonResult.orderedSame // orderedSame -> 順序が同じならtrueを返す
+
+// 文字列の探索
+"abc".range(of: "bc") // 0から数え始めて1番目から2番目に位置する
+
+
+
 
 
 
