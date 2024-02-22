@@ -22,3 +22,15 @@ print(false || false)
 print(false || true)
 print(true || false)
 print(true || true)
+
+"""
+Int型
+"""
+
+let c = 123 // Int型
+let d = 1.0 // Double型
+
+//最大値、最小値の取得
+print(Int8.min)
+print(Int8.max)
+
