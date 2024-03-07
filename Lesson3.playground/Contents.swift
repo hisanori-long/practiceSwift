@@ -248,4 +248,28 @@ let ay: Any = 1
 let aj: Any = 2
 //ay + aj //コンパイルエラー（元のInt型の情報が失われているから四則演算が使えない）
 
+"""
+タプル型
+"""
+var tuple: (Int, String)
+tuple = (1, "a")
+
+// 要素へのアクセス
+print(tuple.0)
+print(tuple.1)
+
+let tuple1 = (int1: 1, string2:"a")
+print(tuple1.int1)
+print(tuple1.string2)
+
+let int1: Int
+let string1: String
+(int1, string1) = (1, "a")
+print(int1)
+print(string1)
+
+// Void型
+()
+
+
 
