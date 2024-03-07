@@ -237,5 +237,15 @@ var ag: String? = ae // 暗黙的にアンラップしているので、アン�
 var ah: Int! = nil
 //ah + 1 // Intに値がないため、実行時にエラーが起きる
 
+"""
+Any型
+"""
+let string: Any = "abc"
+let int: Any = 123
+
+// Any型への代入による方の損失
+let ay: Any = 1
+let aj: Any = 2
+//ay + aj //コンパイルエラー（元のInt型の情報が失われているから四則演算が使えない）
 
 
