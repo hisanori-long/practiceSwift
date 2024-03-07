@@ -244,7 +244,7 @@ let string: Any = "abc"
 let int: Any = 123
 
 // Any型への代入による方の損失
-let ay: Any = 1
+let ai: Any = 1
 let aj: Any = 2
 //ay + aj //コンパイルエラー（元のInt型の情報が失われているから四則演算が使えない）
 
@@ -271,5 +271,28 @@ print(string1)
 // Void型
 ()
 
+"""
+型のキャスト
+"""
+let ak = "abc" as Any // String型をAny型にアップキャスト
+print(type(of: ak))
+//let al = "abc" as Int //String型はInt型を継承していないためコンパイルエラー
 
+let am: Any = "abc"
+print(type(of: am))
+
+//ダウンキャストは失敗する可能性があるため、as?やas!を使用する
+let an = 1 as Any
+let an_int = an as? Int
+print(type(of: an_int))
+let an_string = an as? String // ダウンキャストに失敗し、nilが返る
+print(type(of: an_string))
+
+let ao = 1 as Any
+let ao_int = ao as! Int
+//let ao_string = ao as! String // 実行時エラー（ダウンキャスト失敗）
+
+//型の判定
+let ap: Any = 1
+let isInt = ap is Int
 
