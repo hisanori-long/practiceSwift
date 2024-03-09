@@ -296,3 +296,29 @@ let ao_int = ao as! Int
 let ap: Any = 1
 let isInt = ap is Int
 
+"""
+値比較のためのプロトコル
+"""
+// Equatableプロトコル（同値性の検証）
+let boolLeft = true
+let boolRight = true
+boolLeft == boolRight
+boolLeft != boolRight
+
+let intLeft = 12
+let intRight = 13
+intLeft == intRight
+intLeft != intRight
+
+let stringLeft = "abc"
+let stringRight = "def"
+stringLeft == stringRight
+stringLeft != stringRight
+
+//Comparableプロトコル（大小関係の検証）
+intLeft < intRight
+
+stringLeft <= stringRight
+
+
+
